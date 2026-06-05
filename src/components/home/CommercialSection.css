@@ -1,0 +1,63 @@
+.commercial-section {
+    padding: 100px 0;
+    background-color: var(--color-bg-light);
+    scroll-margin-top: 90px;
+}
+
+.commercial-placeholder {
+    margin-top: 50px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.png');
+    /* Using existing asset as bg */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+
+.placeholder-content {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.placeholder-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-secondary);
+}
+
+.btn-secondary {
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .commercial-placeholder {
+        height: 300px;
+    }
+
+    .placeholder-content p {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,56 @@
+/* Homepage Specific Styles */
+
+.home-page {
+    position: relative;
+    width: 100%;
+}
+
+/* Home FAQ Section */
+.home-faq-section {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-bg-light);
+    border-top: 1px solid #e5e5e5;
+}
+
+.home-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.home-faq-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid var(--color-secondary);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.home-faq-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.home-faq-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.home-faq-card p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .home-faq-grid {
+        grid-template-columns: 1fr;
+    }
+}

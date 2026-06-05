@@ -1,0 +1,322 @@
+.contact-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+}
+
+.contact-modal-overlay.visible {
+    opacity: 1;
+}
+
+.contact-modal-split {
+    background: var(--color-white);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    margin: auto;
+    overflow: hidden;
+}
+
+.contact-modal-split.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-modal-close:hover {
+    color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+.contact-modal-form-side {
+    flex: 0 0 45%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    overflow-y: auto;
+}
+
+.contact-modal-header {
+    margin-bottom: 1.2rem;
+}
+
+.contact-modal-header h2 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-weight: 700;
+}
+
+.contact-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9;
+    width: 100%;
+    color: var(--color-primary);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(201, 165, 92, 0.15);
+    background: var(--color-white);
+}
+
+.phone-group {
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    padding: 0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-group:focus-within {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(201, 165, 92, 0.15);
+    background: var(--color-white);
+}
+
+.phone-prefix {
+    padding: 0.8rem 0.5rem 0.8rem 1rem;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.phone-group input {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-left: 0.5rem !important;
+    flex: 1;
+}
+
+.contact-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.2rem;
+}
+
+.btn-submit {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    background: #a44a2c;
+    border: 1px solid #a44a2c;
+    color: var(--color-white);
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #8e3e23;
+    border-color: #8e3e23;
+    box-shadow: 0 4px 12px rgba(164, 74, 44, 0.3);
+}
+
+.privacy-text {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+.privacy-text a {
+    color: #a44a2c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.privacy-text a:hover {
+    text-decoration: underline;
+}
+
+.contact-modal-cta-side {
+    flex: 1;
+    position: relative;
+    background-image: url('/images/indian_family_construction.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.45) 0%, rgba(10, 10, 10, 0.35) 100%);
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-top: 0.5rem;
+}
+
+.cta-heading {
+    font-size: 2.1rem;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.text-gold {
+    color: var(--color-secondary);
+}
+
+.cta-accent-line {
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+.cta-highlight-large {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--color-secondary);
+    font-family: var(--font-body);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+.cta-subtext {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    max-width: 90%;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.cta-action-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-action-text span {
+    color: var(--color-secondary);
+}
+
+.cta-footer-logo {
+    position: absolute;
+    bottom: 0.4rem;
+    right: 1.5rem;
+    z-index: 2;
+}
+
+.cta-footer-logo img {
+    width: 160px;
+    height: auto;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-modal-split {
+        flex-direction: column-reverse;
+        max-width: 95%;
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+
+    .contact-modal-form-side {
+        padding: 1.5rem;
+    }
+
+    .contact-modal-cta-side {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        align-items: flex-start;
+    }
+
+    .cta-content {
+        align-items: center;
+    }
+
+    .cta-heading {
+        font-size: 1.8rem;
+    }
+
+    .cta-subtext {
+        max-width: 100%;
+    }
+
+    .contact-modal-close {
+        color: var(--color-white);
+    }
+}

@@ -1,0 +1,733 @@
+/* =============================================
+   ABOUT PAGE — Premium Editorial Redesign
+   ============================================= */
+.about-page-redesign {
+    padding-top: 152px;
+}
+
+/* ── Utility Classes ── */
+.abt-gold { color: var(--color-secondary) !important; }
+.abt-white { color: var(--color-white) !important; }
+.abt-light { color: rgba(255, 255, 255, 0.6) !important; }
+
+/* ── Scroll Reveal Animation ── */
+.abt-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.abt-reveal.abt-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Section Headers ── */
+.abt-section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.abt-section-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1.2rem;
+}
+
+.abt-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+
+/* =============================================
+   SECTION 1 — CINEMATIC HERO
+   ============================================= */
+
+.abt-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.abt-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.abt-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    animation: abtHeroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes abtHeroZoom {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.12); }
+}
+
+.abt-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg,
+            rgba(10, 10, 10, 0.5) 0%,
+            rgba(10, 10, 10, 0.3) 40%,
+            rgba(10, 10, 10, 0.7) 100%),
+        linear-gradient(90deg,
+            rgba(10, 10, 10, 0.4) 0%,
+            transparent 50%);
+}
+
+.abt-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.abt-hero-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+.abt-hero-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.abt-hero-sub {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto 3rem;
+}
+
+/* Hero Stats */
+.abt-hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.abt-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.abt-stat-number {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    line-height: 1;
+}
+
+.abt-stat-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.5rem;
+}
+
+.abt-stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(201, 165, 92, 0.3);
+}
+
+
+/* =============================================
+   SECTION 2 — LEGACY TIMELINE
+   ============================================= */
+
+.abt-timeline-section {
+    padding: 8rem 2rem;
+    background: var(--color-white);
+    position: relative;
+}
+
+.abt-timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.abt-timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--color-secondary), transparent);
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.abt-timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.abt-timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.abt-timeline-left {
+    flex-direction: row;
+}
+
+.abt-timeline-right {
+    flex-direction: row-reverse;
+}
+
+.abt-timeline-right .abt-timeline-content {
+    text-align: right;
+}
+
+/* Timeline Image */
+.abt-timeline-image-wrap {
+    flex: 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    max-width: 480px;
+}
+
+.abt-timeline-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.abt-timeline-image-wrap:hover .abt-timeline-image {
+    transform: scale(1.05);
+}
+
+.abt-timeline-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(10, 10, 10, 0.5) 100%);
+    pointer-events: none;
+}
+
+.abt-timeline-era {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+}
+
+/* Timeline Content */
+.abt-timeline-content {
+    flex: 1;
+    max-width: 440px;
+}
+
+.abt-timeline-year {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.abt-timeline-badge {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.35);
+    margin-bottom: 1rem;
+}
+
+.abt-timeline-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.abt-timeline-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--color-secondary);
+    margin-bottom: 1.2rem;
+}
+
+.abt-timeline-right .abt-timeline-divider {
+    margin-left: auto;
+}
+
+.abt-timeline-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* =============================================
+   SECTION 3 — FOUNDER'S APPROACH
+   ============================================= */
+
+.abt-founder-section {
+    position: relative;
+    padding: 8rem 2rem;
+    overflow: hidden;
+}
+
+.abt-founder-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--color-primary);
+}
+
+.abt-founder-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(201, 165, 92, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(201, 165, 92, 0.04) 0%, transparent 60%);
+}
+
+.abt-founder-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.abt-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.abt-pillar-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 165, 92, 0.12);
+    border-radius: 8px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.abt-pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.abt-pillar-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(201, 165, 92, 0.25);
+    transform: translateY(-6px);
+}
+
+.abt-pillar-card:hover::before {
+    opacity: 1;
+}
+
+.abt-pillar-icon {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.abt-pillar-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 0.3rem;
+}
+
+.abt-pillar-subtitle {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.abt-pillar-divider {
+    width: 30px;
+    height: 1px;
+    background: rgba(201, 165, 92, 0.3);
+    margin: 0 auto 1.5rem;
+}
+
+.abt-pillar-text {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =============================================
+   SECTION 4 — LEADERSHIP TEAM
+   ============================================= */
+
+.abt-leadership-section {
+    padding: 8rem 2rem;
+    background: var(--color-bg-light);
+}
+
+.abt-leadership-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.abt-leader-card {
+    text-align: center;
+    transition: transform 0.4s ease;
+    width: 100%;
+    max-width: 350px;
+}
+
+.abt-leader-card:hover {
+    transform: translateY(-8px);
+}
+
+.abt-leader-portrait {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    position: relative;
+    background: var(--color-primary);
+}
+
+.abt-leader-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.abt-leader-card:hover .abt-leader-portrait img {
+    filter: grayscale(0%);
+    transform: scale(1.04);
+}
+
+/* Logo variation for placeholder */
+.abt-leader-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+.abt-leader-logo img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(10) grayscale(0%);
+}
+
+.abt-leader-card:hover .abt-leader-logo img {
+    filter: brightness(10) grayscale(0%);
+    transform: scale(1.06);
+}
+
+.abt-leader-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+}
+
+.abt-leader-role {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.abt-leader-divider {
+    width: 30px;
+    height: 1px;
+    background: var(--color-secondary);
+    margin: 0 auto 1rem;
+}
+
+.abt-leader-philosophy {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+
+/* =============================================
+   SECTION 5 — CLOSING STATEMENT
+   ============================================= */
+
+.abt-closing-section {
+    position: relative;
+    padding: 10rem 2rem;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.abt-closing-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.abt-closing-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abt-closing-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+        rgba(10, 10, 10, 0.75) 0%,
+        rgba(10, 10, 10, 0.85) 100%);
+}
+
+.abt-closing-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 650px;
+}
+
+.abt-closing-label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.abt-closing-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.abt-closing-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    margin: 0 auto 2rem;
+}
+
+.abt-closing-text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 3rem;
+}
+
+.abt-closing-cta {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, var(--color-secondary), #b8923f);
+    color: #0a0a0a;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(201, 165, 92, 0.3);
+    text-decoration: none;
+}
+
+.abt-closing-cta:hover {
+    background: linear-gradient(135deg, #d4af5a, var(--color-secondary));
+    box-shadow: 0 8px 30px rgba(201, 165, 92, 0.5);
+    transform: translateY(-3px);
+}
+
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+
+@media (max-width: 1024px) {
+    .abt-hero-heading {
+        font-size: 3.5rem;
+    }
+
+    .abt-section-title {
+        font-size: 2.5rem;
+    }
+
+    .abt-timeline-item {
+        gap: 3rem;
+    }
+
+    .abt-pillars-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .abt-closing-heading {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .abt-hero {
+        height: 75vh;
+        min-height: 500px;
+    }
+
+    .abt-hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .abt-hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .abt-stat-divider {
+        width: 40px;
+        height: 1px;
+    }
+
+    /* Timeline stacks */
+    .abt-timeline-line {
+        display: none;
+    }
+
+    .abt-timeline-item,
+    .abt-timeline-left,
+    .abt-timeline-right {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .abt-timeline-right .abt-timeline-content {
+        text-align: left;
+    }
+
+    .abt-timeline-right .abt-timeline-divider {
+        margin-left: 0;
+    }
+
+    .abt-timeline-image-wrap {
+        max-width: 100%;
+    }
+
+    .abt-section-title {
+        font-size: 2rem;
+    }
+
+    .abt-section-header {
+        margin-bottom: 3rem;
+    }
+
+    .abt-timeline-section,
+    .abt-founder-section,
+    .abt-leadership-section {
+        padding: 5rem 1.5rem;
+    }
+
+    .abt-leadership-grid {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .abt-closing-heading {
+        font-size: 2.2rem;
+    }
+
+    .abt-closing-section {
+        padding: 6rem 1.5rem;
+    }
+}

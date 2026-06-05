@@ -1,0 +1,44 @@
+.testimonials {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-light);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.review-card {
+    background: var(--color-white);
+    padding: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+}
+
+.review-text {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.reviewer-info h5 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.reviewer-info span {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,75 @@
+.portfolio-styles {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg-light);
+}
+
+.styles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    /* Increased gap */
+}
+
+.style-card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    height: auto;
+    /* Allow auto height */
+    display: flex;
+    flex-direction: column;
+}
+
+.style-card:hover {
+    transform: translateY(-5px);
+}
+
+.style-image-wrapper {
+    width: 100%;
+    height: 300px;
+    /* Fixed height for uniformity */
+    overflow: hidden;
+}
+
+.style-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Adjust Chettinad image (3rd card) to crop right side (focus left) */
+.style-card:nth-child(3) .style-image-wrapper img {
+    object-position: 20% center;
+    /* Shifts view to the left, cropping the right */
+}
+
+/* New content box below image */
+.style-content-box {
+    padding: 1.5rem;
+    background: var(--color-white);
+    flex-grow: 1;
+    /* Ensure equal height text areas align if using flex column */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.style-content-box h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.style-content-box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .styles-grid {
+        grid-template-columns: 1fr;
+    }
+}

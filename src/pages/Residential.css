@@ -1,0 +1,202 @@
+.residential-page-container {
+    background-color: var(--color-bg-light);
+    padding-top: 152px;
+}
+
+/* Hero Banner */
+.res-hero-banner {
+    position: relative;
+    padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+    background-image: url('/images/hero2_4k.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.res-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.9) 30%, rgba(20, 20, 20, 0.4) 100%);
+    z-index: 1;
+}
+
+.res-hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.res-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--color-secondary);
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.res-hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.res-lead {
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.res-hero-divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-secondary);
+}
+
+/* FAQ Section */
+.res-faq-section {
+    padding: var(--spacing-lg) 0;
+    background-color: #f1f1f1;
+}
+
+.res-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.res-faq-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid var(--color-secondary);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.res-faq-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.res-faq-card h3 {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.res-faq-card p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* Call to Action Section */
+.res-cta-section {
+    position: relative;
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.res-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/pillar_architecture.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.res-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.res-cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+}
+
+.res-cta-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-md);
+    font-weight: 300;
+}
+
+.res-cta-btn {
+    display: inline-block;
+    padding: 12px 36px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: background-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+}
+
+.res-cta-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .res-faq-grid {
+        grid-template-columns: 1fr;
+    }
+    .res-hero-banner {
+        min-height: 400px;
+        padding-top: 120px;
+    }
+    .res-hero-text h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .res-hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .res-lead {
+        font-size: 1rem;
+    }
+    .res-cta-content h2 {
+        font-size: 1.8rem;
+    }
+}

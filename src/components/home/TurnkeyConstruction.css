@@ -1,0 +1,68 @@
+.turnkey-section {
+    padding: 8rem 0;
+    background-color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.turnkey-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/T1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(3px) brightness(0.95);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.turnkey-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.turnkey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.turnkey-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(201, 165, 92, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.turnkey-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.turnkey-card .icon-box {
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.turnkey-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.turnkey-card p {
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}

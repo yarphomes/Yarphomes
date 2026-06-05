@@ -1,0 +1,229 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.header.scrolled {
+    background: var(--color-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 160px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .logo img {
+    height: 120px;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav a {
+    font-family: 'Inter', sans-serif;
+    /* Updated to Inter */
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header.scrolled .nav a {
+    color: var(--color-primary);
+}
+
+.nav a:hover {
+    color: var(--color-secondary);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.header.scrolled .dropdown-title {
+    color: var(--color-primary);
+}
+
+.dropdown-title:hover {
+    color: var(--color-secondary);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    min-width: 220px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    color: var(--color-primary) !important;
+    padding: 0.5rem 1.5rem;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f9f9f9;
+    color: var(--color-secondary) !important;
+}
+
+.btn-contact {
+    border: 1px solid var(--color-secondary);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: var(--color-secondary);
+    color: var(--color-white) !important;
+}
+
+.header-contact-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-white);
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.header-whatsapp svg {
+    color: #25d366;
+    transition: transform 0.3s ease;
+}
+
+.header-whatsapp:hover {
+    color: var(--color-secondary);
+}
+
+.header-whatsapp:hover svg {
+    transform: scale(1.15);
+}
+
+.header.scrolled .header-whatsapp {
+    color: var(--color-primary);
+}
+
+.header.scrolled .header-whatsapp:hover {
+    color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .header-whatsapp {
+        color: var(--color-primary);
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: 0.3s;
+}
+
+.header.scrolled .menu-toggle .bar {
+    background-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--color-white);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav.open {
+        transform: translateY(0);
+    }
+
+    .nav a {
+        color: var(--color-primary);
+    }
+}

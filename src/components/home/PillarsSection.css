@@ -1,0 +1,306 @@
+/* ========================================
+   THE PILLARS OF YARP HOMES
+   Premium Editorial Card Section
+   ======================================== */
+
+.pillars-section {
+    padding: 7rem 2rem 6rem;
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background texture */
+.pillars-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(201, 165, 92, 0.03) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(201, 165, 92, 0.02) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* ---- Section Header ---- */
+
+.pillars-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.pillars-eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+.pillars-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.pillars-title .text-accent {
+    color: var(--color-secondary);
+}
+
+.pillars-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: #999;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 550px;
+    margin: 0 auto 1.5rem;
+}
+
+.pillars-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    margin: 0 auto;
+}
+
+/* ---- Card Grid ---- */
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---- Individual Card ---- */
+
+.pillar-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 520px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.4s ease;
+}
+
+.pillar-card.pillar-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pillar-card:hover {
+    box-shadow: 0 20px 60px rgba(201, 165, 92, 0.15), 0 0 0 1px rgba(201, 165, 92, 0.1);
+}
+
+/* ---- Card Background Image ---- */
+
+.pillar-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.pillar-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pillar-card:hover .pillar-card-bg img {
+    transform: scale(1.08);
+}
+
+/* ---- Card Overlay ---- */
+
+.pillar-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.2) 0%,
+        rgba(10, 10, 10, 0.45) 40%,
+        rgba(10, 10, 10, 0.85) 75%,
+        rgba(10, 10, 10, 0.95) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+.pillar-card:hover .pillar-card-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.15) 0%,
+        rgba(10, 10, 10, 0.35) 40%,
+        rgba(10, 10, 10, 0.8) 75%,
+        rgba(10, 10, 10, 0.92) 100%
+    );
+}
+
+/* ---- Card Content ---- */
+
+.pillar-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.8rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.pillar-card-number {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: rgba(201, 165, 92, 0.5);
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+}
+
+.pillar-card-icon {
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.pillar-card:hover .pillar-card-icon {
+    transform: translateY(-3px);
+}
+
+.pillar-card-heading {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.pillar-card:hover .pillar-card-heading {
+    color: var(--color-secondary);
+}
+
+.pillar-card-line {
+    width: 35px;
+    height: 2px;
+    background: var(--color-secondary);
+    margin-bottom: 1rem;
+    transition: width 0.4s ease;
+}
+
+.pillar-card:hover .pillar-card-line {
+    width: 60px;
+}
+
+.pillar-card-desc {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #bbb;
+    line-height: 1.65;
+    font-weight: 300;
+    max-width: 95%;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.pillar-card:hover .pillar-card-desc {
+    opacity: 1;
+    color: #ddd;
+}
+
+/* ---- Responsive: Tablet ---- */
+
+@media (max-width: 1024px) {
+    .pillars-section {
+        padding: 5rem 1.5rem 4rem;
+    }
+
+    .pillars-title {
+        font-size: 2.4rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .pillar-card {
+        min-height: 450px;
+    }
+}
+
+/* ---- Responsive: Mobile ---- */
+
+@media (max-width: 640px) {
+    .pillars-section {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .pillars-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .pillars-title {
+        font-size: 2rem;
+    }
+
+    .pillars-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        padding-bottom: 1rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pillar-card {
+        min-width: 85vw;
+        min-height: 420px;
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+
+    .pillar-card-content {
+        padding: 1.5rem 1.4rem;
+    }
+
+    .pillar-card-heading {
+        font-size: 1.3rem;
+    }
+
+    .pillar-card-desc {
+        font-size: 0.85rem;
+    }
+}
