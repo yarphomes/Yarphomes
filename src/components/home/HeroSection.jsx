@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
 const HeroSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const navigate = useNavigate();
 
     // Mixed Media Slideshow
     // Supports 'video' or 'image' type.
@@ -66,7 +68,7 @@ const HeroSection = () => {
                             Complete turnkey construction crafted for modern family living.
                         </p>
                         <div className="cta-panel-divider"></div>
-                        <button className="cta-panel-button" onClick={() => window.location.href = '/contact'}>
+                        <button className="cta-panel-button" onClick={() => navigate('/contact')}>
                             Book Free Consultation
                         </button>
                         <span className="cta-panel-micro">Personalized project guidance</span>
