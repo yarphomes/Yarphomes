@@ -69,6 +69,7 @@
     justify-content: center;
     background: #ffffff;
     overflow-y: auto;
+    min-height: 430px; /* Keep height consistent in success state to avoid right-side logo/bg shifting */
 }
 
 .contact-modal-header {
