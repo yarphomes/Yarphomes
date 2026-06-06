@@ -26,7 +26,7 @@ const Contact = () => {
         setSubmitStatus(null);
 
         // Dynamically extract the Web3Forms access key from the hidden form field
-        const accessKey = e.target.access_key?.value || "62d4a058-2690-44cf-bd88-902d8b8110ef";
+        const accessKey = e.target.access_key?.value || "62d4a058-2690-4dcf-bd88-902d8b8110ef";
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -160,7 +160,7 @@ const Contact = () => {
                     <div className="contact-form-container">
                         <h3>Send us a Message</h3>
                         <form onSubmit={handleSubmit}>
-                            <input type="hidden" name="access_key" value="62d4a058-2690-44cf-bd88-902d8b8110ef" />
+                            <input type="hidden" name="access_key" value="62d4a058-2690-4dcf-bd88-902d8b8110ef" />
                             <div className="form-group">
                                 <label>Name</label>
                                 <input
