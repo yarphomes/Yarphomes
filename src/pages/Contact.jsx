@@ -118,15 +118,8 @@ const Contact = () => {
                 schemas={[orgSchema, contactSchema, breadcrumbSchema]}
             />
             
-            <div className="contact-hero-banner">
-                <div className="contact-hero-overlay"></div>
-                <div className="contact-hero-content container">
-                    <h1>Connect with Yarp Homes</h1>
-                    <p className="contact-hero-sub">Begin your custom home or commercial development journey with us</p>
-                </div>
-            </div>
-
             <div className="contact-page">
+                <h1 className="contact-page-title">Connect with Yarp Homes</h1>
                 <div className="contact-wrapper">
                     <div className="contact-info">
                         <h3>Get in Touch</h3>
