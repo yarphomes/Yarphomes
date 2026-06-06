@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CommercialSection.css';
 
 const CommercialSection = () => {
@@ -14,7 +15,7 @@ const CommercialSection = () => {
                     <div className="placeholder-content">
                         <p>Our premium commercial portfolio is currently being curated.</p>
                         <p>We specialize in boutique offices, retail showrooms, and luxury hospitality spaces.</p>
-                        <button className="btn-secondary" onClick={() => window.location.href = '/contact'}>Get Early Access</button>
+                        <Link to="/contact" className="btn-secondary">Get Early Access</Link>
                     </div>
                 </div>
             </div>

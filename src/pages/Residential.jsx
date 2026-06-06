@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 
 import YarpSignatures from '../components/home/YarpSignatures';
@@ -150,7 +151,7 @@ const Residential = () => {
                 <div className="res-cta-content container">
                     <h2>Ready to Build Your Generational Asset?</h2>
                     <p>Connect with our senior consulting engineers and planners for a personalized turnkey proposal in Bangalore or Chennai.</p>
-                    <a href="/contact" className="res-cta-btn">Book Consultation</a>
+                    <Link to="/contact" className="res-cta-btn">Book Consultation</Link>
                 </div>
             </section>
         </div>

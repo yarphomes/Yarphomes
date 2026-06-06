@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -68,9 +68,9 @@ const HeroSection = () => {
                             Complete turnkey construction crafted for modern family living.
                         </p>
                         <div className="cta-panel-divider"></div>
-                        <button className="cta-panel-button" onClick={() => navigate('/contact')}>
+                        <Link to="/contact" className="cta-panel-button">
                             Book Free Consultation
-                        </button>
+                        </Link>
                         <span className="cta-panel-micro">Personalized project guidance</span>
                     </div>
                 </div>

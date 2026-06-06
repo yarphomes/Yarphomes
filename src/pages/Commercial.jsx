@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 import CommercialSection from '../components/home/CommercialSection';
 import './Commercial.css';
@@ -165,7 +166,7 @@ const Commercial = () => {
                 <div className="com-cta-content container">
                     <h2>Expand Your Commercial Footprint</h2>
                     <p>Contact our commercial development division to review joint venture opportunities or custom built-to-suit commercial projects.</p>
-                    <a href="/contact" className="com-cta-btn">Enquire Today</a>
+                    <Link to="/contact" className="com-cta-btn">Enquire Today</Link>
                 </div>
             </section>
         </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 import './About.css';
 
@@ -232,9 +233,9 @@ const About = () => {
                         At Yarp Homes, we believe a home should stand as a legacy — timeless in design,
                         enduring in value, and crafted for generations.
                     </p>
-                    <a href="/contact" className="abt-closing-cta">
+                    <Link to="/contact" className="abt-closing-cta">
                         Book a Consultation
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>

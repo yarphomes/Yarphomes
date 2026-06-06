@@ -350,6 +350,8 @@
     box-shadow: 0 4px 15px rgba(201, 165, 92, 0.3);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    text-align: center;
 }
 
 .cta-panel-button::before {
