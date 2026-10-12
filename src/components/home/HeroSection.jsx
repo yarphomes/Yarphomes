@@ -46,7 +46,7 @@ const HeroSection = () => {
                 <div className="hero-layout">
                     <div className="hero-left">
                         <h1 className="hero-description fade-up delay-3" style={{ fontSize: '2.5rem', fontWeight: '600', lineHeight: '1.3', fontFamily: "'Cinzel', serif", color: 'var(--color-white)', textTransform: 'uppercase', letterSpacing: '3px' }}>
-                            Luxury Independent Homes Crafted for <span style={{ color: 'var(--color-secondary)' }}>Generational Living</span>
+                            Luxury Homes Crafted for <span style={{ color: 'var(--color-secondary)' }}>Generational Living</span>
                         </h1>
                         <div className="hero-stats fade-up delay-4">
                             <div className="stat-item">

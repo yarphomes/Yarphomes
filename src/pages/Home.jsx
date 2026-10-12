@@ -3,12 +3,13 @@ import SEO from '../components/common/SEO';
 import HeroSection from '../components/home/HeroSection';
 import PillarsSection from '../components/home/PillarsSection';
 import TurnkeyConstruction from '../components/home/TurnkeyConstruction';
+import ConstructionPackages from '../components/home/ConstructionPackages';
 import YarpSignatures from '../components/home/YarpSignatures';
 import CommercialSection from '../components/home/CommercialSection';
 import Testimonials from '../components/home/Testimonials';
 import './Home.css'; // Let's check or create Home.css if needed, or import standard page spacing
 
-const Home = () => {
+const Home = ({ onOpenContact }) => {
     // GEO-friendly Q&As for the homepage
     const faqs = [
         {
@@ -119,7 +120,7 @@ const Home = () => {
             <HeroSection />
             <PillarsSection />
             <TurnkeyConstruction />
-            
+            <ConstructionPackages onOpenContact={onOpenContact} />
             <YarpSignatures />
             <CommercialSection />
             <Testimonials />

@@ -77,7 +77,7 @@ function App() {
             <Header onOpenContact={() => setIsContactModalOpen(true)} />
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home onOpenContact={() => setIsContactModalOpen(true)} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/residential" element={<Residential />} />
