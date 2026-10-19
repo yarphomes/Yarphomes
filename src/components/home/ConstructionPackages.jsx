@@ -68,11 +68,6 @@ const PackageCard = ({ pkg, index, onOpenContact }) => {
         <div className={`package-card delay-${index + 1} ${pkg.id === 'signature' ? 'signature-package' : ''} package-reveal`}>
             <div className="package-header">
                 <h3 className="package-name">{pkg.name}</h3>
-                <div className="package-price">
-                    {formatINR(pkg.price)}
-                    <span style={{ fontSize: '1rem', fontWeight: 400, color: '#aaa' }}>/sq.ft</span>
-                </div>
-                <div className="package-descriptor">(Incl. GST)</div>
             </div>
 
             <div className="package-accordions">
